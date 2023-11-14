@@ -1,0 +1,8 @@
+# vscode 
+.vscode/
+
+# log
+*.log
+
+# app
+auto-initail-server
