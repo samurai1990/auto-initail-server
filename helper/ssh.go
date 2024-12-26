@@ -149,7 +149,7 @@ func (p *Prosses) copySSHKey(key string) error {
 }
 
 func (p *Prosses) changeSSHPort(NPort int) error {
-	command := fmt.Sprintf("sed -i 's/#Port 22/Port %d/' /etc/ssh/sshd_config && systemctl restart sshd", NPort)
+	command := fmt.Sprintf("sed -i 's/^#\\?Port 22/Port %d/' /etc/ssh/sshd_config && systemctl restart sshd", NPort)
 	return p.RunCommand(command)
 }
 
